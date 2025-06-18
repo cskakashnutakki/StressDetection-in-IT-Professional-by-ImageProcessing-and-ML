@@ -1,0 +1,82 @@
+{%extends 'base.html'%}
+{%load static%}
+
+{%block contents%}
+
+<style>
+  .shadowWrapper {
+      font-family: "Book Antiqua";
+      background:white;
+      margin-top: 50px;
+
+  }
+
+  .centered-form {
+      display: flex;
+      justify-content: center; /* Center horizontally */
+      align-items: center; /* Center vertically */
+      height: 100vh; /* Make the form take up the full viewport height */
+  }
+
+  .registration-form {
+      max-width: 600px; /* Control the maximum width of the form */
+      width: 100%; /* Make the form as wide as its container */
+      padding: 20px; /* Add some padding for spacing inside the form */
+  }
+</style>
+
+<br><br>
+<div class="slider slider-revolution revolution-slider  fullwidth">
+    <div class="centered-form">
+            <div class="shadowWrapper">
+                <div class="registration-form">
+                        <center>
+                                <h2 class="text-center p-2"><u>User Login Form</u></h2>
+							<form action="{%url 'UserLoginCheck'%}" method="POST"  style="width:100%">
+                    {% csrf_token %}
+                    <table>
+                        <div class="form-group row">
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="loginname" required placeholder="Enter Login Id">
+                </div>
+              </div>
+                        <div class="form-group row">
+                <div class="col-md-12">
+                  <input type="password" class="form-control" name="pswd" required placeholder="Enter password">
+                </div>
+              </div>
+
+
+                        <tr>
+                            <td>
+                                <button class="btn btn-block btn-primary text-white py-3 px-5" style="margin-left:20%;"
+                                        type="submit">
+                                    Login
+                                </button>
+                            </td>
+                        </tr>
+
+                        {% if messages %}
+                        {% for message in messages %}
+                        <font color='GREEN'> {{ message }}</font>
+                        {% endfor %}
+                        {% endif %}
+
+                    </table>
+
+                </form>
+                                </center>
+
+                                    </p>
+
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{%endblock%}
