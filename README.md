@@ -162,9 +162,9 @@ If you like this project, please consider giving it a ⭐ on GitHub!
 
 If you want, I can also generate:
 
-✅ A **professional README badge section**
-✅ A **GIF demo preview**
-✅ A **one-page project explanation for your resume**
-✅ A **LinkedIn project post**
+✅ A **professional README badge section**   
+✅ A **GIF demo preview**  
+✅ A **one-page project explanation for your resume**  
+✅ A **LinkedIn project post**  
 
 Just tell me!
