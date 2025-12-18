@@ -65,9 +65,10 @@ def UploadImageForm(request):
 def UploadImageAction(request):
     image_file = request.FILES['file']
 
-    # let's check if it is a csv file
-    if not image_file.name.endswith('.jpg'):
-        messages.error(request, 'THIS IS NOT A JPG  FILE')
+    # let's check if it is a valid image file
+    allowed_extensions = ['.jpg', '.jpeg', '.png', '.gif']
+    if not any(image_file.name.lower().endswith(ext) for ext in allowed_extensions):
+        messages.error(request, 'THIS IS NOT A VALID IMAGE FILE. ALLOWED: JPG, JPEG, PNG, GIF')
 
     fs = FileSystemStorage()
     filename = fs.save(image_file.name, image_file)
