@@ -30,8 +30,8 @@
               <div class="shadowWrapper">
                   <div class="registration-form">
                           <center>
-                                  <h2 class="text-center p-2"><u>Admin Login Form</u></h2>
-                              <form action="{%url 'AdminLoginCheck'%}" method="POST"  style="width:100%">
+                                  <h2><u>User Registration Form</u></h2>
+                              <form method="POST"  style="width:100%">
 
                     {% csrf_token %}
                     
@@ -77,7 +77,7 @@
                             <td>{{form.status}}</td>
                         </tr>
 <tr><td></td>
-     <td><button type="submit" class="comment_button trans_200">Register</button></td>
+     <td><button type="submit">Register</button></td>
                         </tr>
 
 
